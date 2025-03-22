@@ -1,0 +1,18 @@
+services:
+  web:
+    build: .
+    command: python manage.py runserver
+    volumes:
+      - data:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  db:  # Database service
+    image: postgres:10
+    volumes:
+      - data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
