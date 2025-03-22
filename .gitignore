@@ -1,5 +1,7 @@
 .env
 data
 db*
-Menage/__pycache__/
+Menage/__pycache__/*
+
+
 
