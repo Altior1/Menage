@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Créer une tâche</title>
+</head>
+<body>
+    <h1>Créer une tâche</h1>
+    <form action="/taches" method="post">
+        <label for="title">Titre</label>
+        <input type="text" name="title" id="title" required>
+        <br>
+        <label for="description">Description</label>
+        <textarea name="description" id="description" required></textarea>
+        <br>
+        <label for="due_date">Date d'échéance</label>
+        <input type="date" name="due_date" id="due_date" required>
+        <br>
+        <button type="submit">Créer</button>
+    </form>
+</body>
+</html>
